@@ -1,0 +1,699 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+/* #746D5B gray
+   #E2D2BB bright
+  #F0E9E3 brighter
+*/
+
+//  ------------------------                   ----------
+// ========================  V A R I A B L E S  ==========
+//  ------------------------                   ----------
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(../font/Poppins/Poppins-Light.woff2) format("woff2"),
+    url(../font/Poppins/Poppins-Light.woff) format("woff"),
+    url(../font/Poppins/Poppins-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../font/Poppins/Poppins-Regular.woff2) format("woff2"),
+    url(../font/Poppins/Poppins-Regular.woff) format("woff"),
+    url(../font/Poppins/Poppins-Regular.ttf) format("truetype");
+}
+
+//--------------------------- Color
+$mainColor: white;
+$secondaryColor: rgb(0, 128, 128);
+$fontMainColor: rgb(17, 17, 17);
+$fontSecondaryColor: white;
+
+//--------------------------- Invert Color
+$invertMainColor: rgb(0, 128, 128);
+$invertFontMainColor: white;
+
+//--------------------------- Font
+$fontFamily: "Poppins-Light", sans-serif;
+
+//--------------------------- Padding
+$defaultPadding: 50px 15%;
+$secondPadding: 10px 15%;
+$thirdPadding: 10px;
+
+//--------------------------- Margin
+$defaultMargin: 30px;
+$secondMargin: 20px;
+$thirdMargin: 10px;
+
+//--------------------------- Box Shadow
+$boxShadow: 0 0 7px rgb(204, 204, 204);
+
+//--------------------------- Duration
+$animDuration: 1s;
+
+//  ------------------------                   ----------
+// ========================      M I X I N      ==========
+//  ------------------------                   ----------
+
+// M A R G I N
+@mixin zero {
+  margin: 0;
+  padding: 0;
+}
+
+// B L O C K Q U O T E
+@mixin blockqoute {
+  margin: 10px 20%;
+  width: 60%;
+  font-family: "Poppins-Regular", serif;
+  font-size: 1.15rem;
+  font-weight: lighter;
+  text-align: center;
+  position: relative;
+  overflow-wrap: break-word;
+}
+
+// O P E N - Q U O T E
+@mixin open-qoute {
+  content: open-quote;
+  font: 4rem sans-serif;
+  line-height: 1;
+  position: absolute;
+  top: -10px;
+  left: -20px;
+}
+// C L O S E - Q U O T E
+@mixin close-qoute {
+  content: close-quote;
+  @include zero;
+  font: 4rem sans-serif;
+  line-height: 0;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+}
+
+// B L O C K Q U O T E  FOR  "M O B I L E"
+@mixin blockqouteMobile {
+  @include zero;
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+}
+
+// O P E N - Q U O T E  FOR  "M O B I L E"
+@mixin open-qouteMobile {
+  font: 3rem sans-serif;
+}
+// C L O S E - Q U O T E  FOR  "M O B I L E"
+@mixin close-qouteMobile {
+  @include zero;
+  font: 3rem sans-serif;
+  line-height: 0;
+}
+
+//  ------------------------                     ----------
+// ========================   K E Y F R A M E S   ==========
+//  ------------------------                     ----------
+
+@keyframes animateHover {
+  to {
+    background: $mainColor;
+    color: $fontMainColor;
+  }
+}
+
+//  ------------------------                   ----------
+// ========================  S E L E C T O R S  ==========
+//  ------------------------                   ----------
+
+.border {
+  border: 1px solid $mainColor;
+  border-radius: 4px;
+}
+
+body {
+  @include zero;
+  font-family: $fontFamily;
+  width: 100%;
+  background: $mainColor;
+  font-size: 1rem;
+
+  //------------------------------------ HEADER
+  header {
+    margin: 0;
+    background: $secondaryColor;
+    padding: 0;
+    color: $mainColor;
+    height: 100vh;
+    position: relative;
+    .navbar {
+      position: absolute;
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      box-shadow: 0 4px 20px 20px rgb(0, 95, 95);
+
+      ul {
+        @include zero;
+        text-align: center;
+        position: relative;
+
+        li {
+          margin: 9px;
+          padding: 9px;
+          display: inline-block;
+          list-style: none;
+          cursor: pointer;
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+
+  /*          &:hover {
+            // opacity: 0.3;
+            // color: $fontMainColor;
+            // background: $mainColor;
+            cursor: pointer;
+            padding: 20px;
+            transition-duration: 1s;
+            border: none;
+
+            &::before {
+              transform-origin: right;
+              content: "";
+              position: absolute;
+              display: block;
+              width: 40px;
+              height: 1px;
+              background: $mainColor;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              display: block;
+              width: 40px;
+              height: 1px;
+              background: $mainColor;
+            }
+          }
+          */
+
+  /* .shape {
+    @include zero;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    opacity: 0.5;
+
+    .squaredot1 {
+      height: 100%;
+      width: 11%;
+      object-fit: cover;
+      position: absolute;
+      left: 0px;
+    }
+
+    .squaredot2 {
+      height: 100%;
+      width: 11%;
+      object-fit: cover;
+      position: absolute;
+      right: 0px;
+    }
+  }
+  */
+  .cover {
+    margin: 0;
+    padding: $secondPadding;
+    position: absolute;
+    bottom: 20%;
+
+    h1.banner-text {
+      @include zero;
+      font-size: 4rem;
+
+      a {
+        @include zero;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+    h3.banner-text {
+      @include zero;
+      font-size: 1.5rem;
+    }
+    p.banner-text {
+      @include zero;
+      font-size: 1.5rem;
+      opacity: 0.65;
+    }
+    .call-to-action {
+      margin-top: 18px;
+      padding: 18px;
+      background-color: inherit;
+      cursor: pointer;
+      a {
+        font-size: 1.125rem;
+        text-decoration: none;
+        background-color: none;
+        color: $fontSecondaryColor;
+      }
+      :hover {
+        opacity: 0.6;
+      }
+    }
+  }
+
+  /*
+  .banner-img {
+    @include zero;
+    position: absolute;
+    height: 70%;
+    object-fit: cover;
+    bottom: 30%;
+    left: 50%;
+    z-index: 6;
+      background-image: url(img/Lyndon.png); 
+    }
+    */
+}
+
+// -------------------------------------CONTENT
+.container {
+  height: 100%;
+  padding: $defaultPadding;
+  display: flex;
+  // flex-direction: row;
+  justify-content: center;
+  position: relative;
+  color: $fontMainColor;
+
+  blockquote {
+    @include blockqoute;
+  }
+
+  blockquote::before {
+    @include open-qoute;
+  }
+  blockquote::after {
+    @include close-qoute;
+  }
+
+  .content {
+    flex: 1.5;
+
+    .title {
+      @include zero;
+      flex: 1;
+    }
+
+    .description {
+      @include zero;
+      display: flex;
+      flex: 1;
+    }
+  }
+
+  .negative-space {
+    @include zero;
+    flex: 0.2;
+  }
+
+  .img {
+    @include zero;
+    flex: 1;
+    margin: $secondMargin;
+
+    div {
+      align-self: center;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      background: $secondaryColor;
+    }
+  }
+  .box-hardskill,
+  .box-softskill,
+  .box-tool {
+    padding: $thirdPadding;
+    margin: $thirdMargin;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    border: 2px solid $secondaryColor;
+    border-radius: 5px 20px;
+
+    ul {
+      text-align: center;
+      margin: $defaultMargin 0;
+      padding: 0;
+
+      h2 {
+        @include zero;
+        color: $secondaryColor;
+      }
+      li {
+        margin: 5px;
+        padding: 0;
+        list-style: none;
+      }
+    }
+
+    ul::after {
+      border: 10px solid $secondaryColor;
+      position: absolute;
+      transform-origin: top;
+    }
+  }
+}
+
+// background-image: url("../img/Lyndon.png");
+.img-box {
+  @include zero;
+  height: 200px;
+  background: rgb(19, 19, 29);
+  text-align: center;
+  margin: $thirdMargin;
+}
+
+.box {
+  width: 250px;
+  height: 100%;
+  background: $mainColor;
+}
+
+footer {
+  @include zero;
+  background: $secondaryColor;
+  color: $fontSecondaryColor;
+  font-size: 0.8em;
+  display: flex;
+  flex-direction: column;
+
+  .container2 {
+    //----------------------- Variable Values
+    @include zero;
+    padding: $defaultPadding;
+
+    //----------------------- Nonvariable Values
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .brand {
+      @include zero;
+      * {
+        @include zero;
+      }
+    }
+    ul {
+      @include zero;
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    padding: $secondPadding;
+    display: flex;
+    justify-content: space-between;
+    background: black;
+    font-size: 0.8em;
+
+    p {
+      @include zero;
+      align-self: center;
+    }
+
+    ul.socialmedia {
+      @include zero;
+      align-items: center;
+      display: flex;
+
+      li {
+        margin: 0 0 0 20px;
+        list-style: none;
+        align-self: center;
+        font-size: 1rem;
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+//###############################                     ########################
+//###############################  FOR MOBILE DEVICE  ########################
+//###############################                     ########################
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    @include zero;
+    font-family: $fontFamily;
+    width: 100%;
+    background: $mainColor;
+    font-size: 1rem;
+
+    //------------------------------------ HEADER
+    header {
+      .navbar {
+        display: none;
+        padding: 0;
+        margin: 0 5%;
+
+        ul {
+          @include zero;
+          text-align: center;
+          position: relative;
+
+          li {
+            margin: 20px;
+            padding: 20px;
+            display: inline-block;
+            border: none;
+
+            &:hover {
+              // opacity: 0.3;
+              // color: $fontMainColor;
+              // background: $mainColor;
+              cursor: pointer;
+              padding: 20px;
+              transition-duration: 1s;
+              border: none;
+
+              &::before {
+                transform-origin: right;
+                content: "";
+                position: absolute;
+                display: block;
+                width: 40px;
+                height: 1px;
+                background: $mainColor;
+              }
+
+              &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 40px;
+                height: 1px;
+                background: $mainColor;
+              }
+            }
+
+            a {
+              text-decoration: none;
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+
+    .cover {
+      @include zero;
+      position: absolute;
+      width: 100%;
+      text-align: center;
+      bottom: 20%;
+
+      .banner-text {
+        @include zero;
+        text-align: center;
+      }
+
+      h1.banner-text {
+        margin: 0 10%;
+        font-size: 2.5em;
+      }
+
+      h2.banner-text {
+        margin: 0 10%;
+        font-size: 1.125em;
+      }
+
+      h3.banner-text {
+        margin: 0 10%;
+        font-size: 1em;
+      }
+    }
+
+    .banner-img {
+      @include zero;
+      position: absolute;
+      height: 70%;
+      object-fit: cover;
+      bottom: 30%;
+      left: 50%;
+      z-index: 6;
+      /*	background-image: url(img/Lyndon.png); */
+    }
+  }
+
+  // -------------------------------------CONTENT
+  .container {
+    margin: 10px 0;
+    padding: $defaultPadding;
+    display: flex;
+    // flex-direction: row;
+    box-shadow: $boxShadow;
+    justify-content: space-between;
+
+    blockquote {
+      @include blockqouteMobile;
+    }
+
+    blockquote::before {
+      @include open-qouteMobile;
+    }
+    blockquote::after {
+      @include close-qouteMobile;
+    }
+
+    .content {
+      flex: 1.5;
+
+      .title {
+        @include zero;
+        flex: 1;
+      }
+
+      .description {
+        @include zero;
+
+        display: flex;
+        flex: 1;
+      }
+    }
+
+    .space {
+      display: none;
+      @include zero;
+      flex: 0.5;
+    }
+
+    .img {
+      display: none;
+      @include zero;
+      flex: 1;
+      margin: $secondMargin;
+      div {
+        align-self: center;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        background: $secondaryColor;
+      }
+    }
+  }
+
+  // background-image: url("../img/Lyndon.png");
+  .img-box {
+    @include zero;
+    height: 200px;
+    background: rgb(19, 19, 29);
+    text-align: center;
+    margin: $thirdMargin;
+  }
+
+  .box {
+    width: 250px;
+    height: 100%;
+    background: $mainColor;
+  }
+
+  footer {
+    .container2 {
+      //----------------------- Nonvariable Values
+      display: flex;
+      flex-direction: column;
+      align-content: space-between;
+      .brand {
+        margin: 10px 0;
+        * {
+          margin: 10px 0;
+        }
+      }
+      ul {
+        margin: 10px 0;
+
+        li {
+          list-style: none;
+
+          a {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+    .copyright {
+      flex-direction: column-reverse;
+      align-items: center;
+      justify-content: center;
+      p {
+        @include zero;
+        align-self: center;
+      }
+      ul.socialmedia {
+        @include zero;
+        display: flex;
+        align-self: center;
+        position: relative;
+
+        li {
+          margin: 0 0 0 20px;
+          list-style: none;
+          font-size: 1rem;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50% -50%);
+          a {
+            @include zero;
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}

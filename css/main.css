@@ -1,0 +1,721 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+/* #746D5B gray
+   #E2D2BB bright
+  #F0E9E3 brighter
+*/
+@font-face {
+  font-family: "Poppins-Light";
+  src: url(../font/Poppins/Poppins-Light.woff2) format("woff2"), url(../font/Poppins/Poppins-Light.woff) format("woff"), url(../font/Poppins/Poppins-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url(../font/Poppins/Poppins-Regular.woff2) format("woff2"), url(../font/Poppins/Poppins-Regular.woff) format("woff"), url(../font/Poppins/Poppins-Regular.ttf) format("truetype");
+}
+
+@-webkit-keyframes animateHover {
+  to {
+    background: white;
+    color: #111111;
+  }
+}
+
+@keyframes animateHover {
+  to {
+    background: white;
+    color: #111111;
+  }
+}
+
+.border {
+  border: 1px solid white;
+  border-radius: 4px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins-Light", sans-serif;
+  width: 100%;
+  background: white;
+  font-size: 1rem;
+  /*          &:hover {
+            // opacity: 0.3;
+            // color: $fontMainColor;
+            // background: $mainColor;
+            cursor: pointer;
+            padding: 20px;
+            transition-duration: 1s;
+            border: none;
+
+            &::before {
+              transform-origin: right;
+              content: "";
+              position: absolute;
+              display: block;
+              width: 40px;
+              height: 1px;
+              background: $mainColor;
+            }
+
+            &::after {
+              content: "";
+              position: absolute;
+              display: block;
+              width: 40px;
+              height: 1px;
+              background: $mainColor;
+            }
+          }
+          */
+  /* .shape {
+    @include zero;
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    object-fit: cover;
+    opacity: 0.5;
+
+    .squaredot1 {
+      height: 100%;
+      width: 11%;
+      object-fit: cover;
+      position: absolute;
+      left: 0px;
+    }
+
+    .squaredot2 {
+      height: 100%;
+      width: 11%;
+      object-fit: cover;
+      position: absolute;
+      right: 0px;
+    }
+  }
+  */
+  /*
+  .banner-img {
+    @include zero;
+    position: absolute;
+    height: 70%;
+    object-fit: cover;
+    bottom: 30%;
+    left: 50%;
+    z-index: 6;
+      background-image: url(img/Lyndon.png); 
+    }
+    */
+}
+
+body header {
+  margin: 0;
+  background: teal;
+  padding: 0;
+  color: white;
+  height: 100vh;
+  position: relative;
+}
+
+body header .navbar {
+  position: absolute;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  -webkit-box-shadow: 0 4px 20px 20px #005f5f;
+          box-shadow: 0 4px 20px 20px #005f5f;
+}
+
+body header .navbar ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  position: relative;
+}
+
+body header .navbar ul li {
+  margin: 9px;
+  padding: 9px;
+  display: inline-block;
+  list-style: none;
+  cursor: pointer;
+}
+
+body header .navbar ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body .cover {
+  margin: 0;
+  padding: 10px 15%;
+  position: absolute;
+  bottom: 20%;
+}
+
+body .cover h1.banner-text {
+  margin: 0;
+  padding: 0;
+  font-size: 4rem;
+}
+
+body .cover h1.banner-text a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+body .cover h3.banner-text {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+}
+
+body .cover p.banner-text {
+  margin: 0;
+  padding: 0;
+  font-size: 1.5rem;
+  opacity: 0.65;
+}
+
+body .cover .call-to-action {
+  margin-top: 18px;
+  padding: 18px;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+body .cover .call-to-action a {
+  font-size: 1.125rem;
+  text-decoration: none;
+  background-color: none;
+  color: white;
+}
+
+body .cover .call-to-action :hover {
+  opacity: 0.6;
+}
+
+.container {
+  height: 100%;
+  padding: 50px 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  color: #111111;
+}
+
+.container blockquote {
+  margin: 10px 20%;
+  width: 60%;
+  font-family: "Poppins-Regular", serif;
+  font-size: 1.15rem;
+  font-weight: lighter;
+  text-align: center;
+  position: relative;
+  overflow-wrap: break-word;
+}
+
+.container blockquote::before {
+  content: open-quote;
+  font: 4rem sans-serif;
+  line-height: 1;
+  position: absolute;
+  top: -10px;
+  left: -20px;
+}
+
+.container blockquote::after {
+  content: close-quote;
+  margin: 0;
+  padding: 0;
+  font: 4rem sans-serif;
+  line-height: 0;
+  text-align: right;
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+}
+
+.container .content {
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
+}
+
+.container .content .title {
+  margin: 0;
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container .content .description {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.container .negative-space {
+  margin: 0;
+  padding: 0;
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+}
+
+.container .img {
+  margin: 0;
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin: 20px;
+}
+
+.container .img div {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  background: teal;
+}
+
+.container .box-hardskill,
+.container .box-softskill,
+.container .box-tool {
+  padding: 10px;
+  margin: 10px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 2px solid teal;
+  border-radius: 5px 20px;
+}
+
+.container .box-hardskill ul,
+.container .box-softskill ul,
+.container .box-tool ul {
+  text-align: center;
+  margin: 30px 0;
+  padding: 0;
+}
+
+.container .box-hardskill ul h2,
+.container .box-softskill ul h2,
+.container .box-tool ul h2 {
+  margin: 0;
+  padding: 0;
+  color: teal;
+}
+
+.container .box-hardskill ul li,
+.container .box-softskill ul li,
+.container .box-tool ul li {
+  margin: 5px;
+  padding: 0;
+  list-style: none;
+}
+
+.container .box-hardskill ul::after,
+.container .box-softskill ul::after,
+.container .box-tool ul::after {
+  border: 10px solid teal;
+  position: absolute;
+  -webkit-transform-origin: top;
+          transform-origin: top;
+}
+
+.img-box {
+  margin: 0;
+  padding: 0;
+  height: 200px;
+  background: #13131d;
+  text-align: center;
+  margin: 10px;
+}
+
+.box {
+  width: 250px;
+  height: 100%;
+  background: white;
+}
+
+footer {
+  margin: 0;
+  padding: 0;
+  background: teal;
+  color: white;
+  font-size: 0.8em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+footer .container2 {
+  margin: 0;
+  padding: 0;
+  padding: 50px 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer .container2 .brand {
+  margin: 0;
+  padding: 0;
+}
+
+footer .container2 .brand * {
+  margin: 0;
+  padding: 0;
+}
+
+footer .container2 ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer .container2 ul li {
+  list-style: none;
+}
+
+footer .container2 ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+footer .copyright {
+  padding: 10px 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: black;
+  font-size: 0.8em;
+}
+
+footer .copyright p {
+  margin: 0;
+  padding: 0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+footer .copyright ul.socialmedia {
+  margin: 0;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+footer .copyright ul.socialmedia li {
+  margin: 0 0 0 20px;
+  list-style: none;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 1rem;
+}
+
+footer .copyright ul.socialmedia li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins-Light", sans-serif;
+    width: 100%;
+    background: white;
+    font-size: 1rem;
+  }
+  body header .navbar {
+    display: none;
+    padding: 0;
+    margin: 0 5%;
+  }
+  body header .navbar ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+  }
+  body header .navbar ul li {
+    margin: 20px;
+    padding: 20px;
+    display: inline-block;
+    border: none;
+  }
+  body header .navbar ul li:hover {
+    cursor: pointer;
+    padding: 20px;
+    -webkit-transition-duration: 1s;
+            transition-duration: 1s;
+    border: none;
+  }
+  body header .navbar ul li:hover::before {
+    -webkit-transform-origin: right;
+            transform-origin: right;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: white;
+  }
+  body header .navbar ul li:hover::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 1px;
+    background: white;
+  }
+  body header .navbar ul li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  body .cover {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 20%;
+  }
+  body .cover .banner-text {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  body .cover h1.banner-text {
+    margin: 0 10%;
+    font-size: 2.5em;
+  }
+  body .cover h2.banner-text {
+    margin: 0 10%;
+    font-size: 1.125em;
+  }
+  body .cover h3.banner-text {
+    margin: 0 10%;
+    font-size: 1em;
+  }
+  body .banner-img {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 70%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    bottom: 30%;
+    left: 50%;
+    z-index: 6;
+    /*	background-image: url(img/Lyndon.png); */
+  }
+  .container {
+    margin: 10px 0;
+    padding: 50px 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 0 0 7px #cccccc;
+            box-shadow: 0 0 7px #cccccc;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .container blockquote {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    text-align: center;
+    width: 100%;
+  }
+  .container blockquote::before {
+    font: 3rem sans-serif;
+  }
+  .container blockquote::after {
+    margin: 0;
+    padding: 0;
+    font: 3rem sans-serif;
+    line-height: 0;
+  }
+  .container .content {
+    -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+            flex: 1.5;
+  }
+  .container .content .title {
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .container .content .description {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .container .space {
+    display: none;
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 0.5;
+        -ms-flex: 0.5;
+            flex: 0.5;
+  }
+  .container .img {
+    display: none;
+    margin: 0;
+    padding: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin: 20px;
+  }
+  .container .img div {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    background: teal;
+  }
+  .img-box {
+    margin: 0;
+    padding: 0;
+    height: 200px;
+    background: #13131d;
+    text-align: center;
+    margin: 10px;
+  }
+  .box {
+    width: 250px;
+    height: 100%;
+    background: white;
+  }
+  footer .container2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: justify;
+        align-content: space-between;
+  }
+  footer .container2 .brand {
+    margin: 10px 0;
+  }
+  footer .container2 .brand * {
+    margin: 10px 0;
+  }
+  footer .container2 ul {
+    margin: 10px 0;
+  }
+  footer .container2 ul li {
+    list-style: none;
+  }
+  footer .container2 ul li a {
+    text-decoration: none;
+    color: inherit;
+  }
+  footer .copyright {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  footer .copyright p {
+    margin: 0;
+    padding: 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  footer .copyright ul.socialmedia {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-item-align: center;
+        align-self: center;
+    position: relative;
+  }
+  footer .copyright ul.socialmedia li {
+    margin: 0 0 0 20px;
+    list-style: none;
+    font-size: 1rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50% -50%);
+            transform: translate(-50% -50%);
+  }
+  footer .copyright ul.socialmedia li a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+  }
+}
+/*# sourceMappingURL=main.css.map */

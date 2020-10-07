@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+/* #746D5B gray
+   #E2D2BB bright
+  #F0E9E3 brighter
+*/
+
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	width: 100%;
+	background: #f3f7fa;
+	font-size: 1.125rem;
+
+	
+}
+
+a{
+	text-decoration: none;
+	color: 	#f3f7fa;
+}
+
+.header{
+	margin: 0;
+	background: #2f313a;
+	padding: 0;
+	color: #f3f7fa;
+	height: 100vh;
+	position: relative;
+}
+
+.navbar{
+	padding: 0;
+	margin: 0 5%;
+}
+
+
+.navbar ul{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	
+}
+.navbar ul li{
+	margin: 20px;
+	padding: 20px;
+	display: inline-block;
+	
+}
+
+
+.shape{
+	margin: 0 auto;
+	padding: 0 auto;
+	position: absolute;
+	width: 100%;
+	height: 80%;
+	object-fit: cover;
+	opacity: 0.5;
+}
+
+
+
+.squaredot1{
+	height: 100%;
+	width: 11%;
+	object-fit: cover;
+	position: absolute;
+	left: 0px;
+}
+
+
+.squaredot2{
+	height: 100%;
+	width: 11%;
+	object-fit: cover;
+	position: absolute;
+	right: 0px;
+}
+
+.cover{
+	position: absolute;
+	padding: 0; 
+	margin: 0;
+	width: 100%;
+	text-align:  center;
+	bottom: 20%;
+
+}
+
+
+
+h1.banner-text{
+	padding: 0; 
+	margin: 5%;
+	font-size: 3em;
+	text-align:  center;
+
+}
+
+h2.banner-text{
+	padding: 0; 
+	margin: 10px;
+	font-weight: lighter;
+	font-size: 1.5em;
+	text-align:  center;
+}
+
+h3.banner-text{
+	padding: 0; 
+	margin: 10px;
+	font-weight: lighter;
+	font-size: 1em;
+	text-align:  center;
+}
+.banner-img{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	height: 70%;
+	object-fit: cover;
+	bottom: 30%;
+	left: 50%;
+	z-index: 6;
+	
+	/*	background-image: url(img/Lyndon.png); */
+}
+
+
+.quote h1{
+	font-family: 'Merriweather', serif;
+	font-size: 1.125rem;
+	font-weight: lighter;
+	text-align: center;
+
+}
+
+
+.container{
+	padding: 50px 25%;
+
+}
+
+.description p{
+	padding: 0 5%;
+}
+
+
+
+
+.img-box{
+	height: 200px;
+	background: blue;
+	margin: 0;
+	padding:0;
+	text-align: center;
+}
+
+
+.box{
+	display: inline-block;
+	width: 250px;
+	height: 100%;
+	background: #F0E9E3;
+}
+
+
